@@ -1,3 +1,5 @@
+import { BASE_URL } from '../index'
+
 class Api {
     constructor(options) {
       this._baseUrl = options.baseUrl
@@ -85,7 +87,7 @@ class Api {
   }
   
   const api = new Api({
-    baseUrl: 'http://localhost:3000',
+    baseUrl: BASE_URL,
     headers: {
       'Content-Type': 'application/json'
     }

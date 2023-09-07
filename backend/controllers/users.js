@@ -44,7 +44,7 @@ module.exports.createUser = (req, res, next) => {
     .then((user) => {
       const userObj = user.toObject();
       const {
-        password: createdPassword,
+        password: _,
         ...createdUserWithOutPassword
       } = userObj;
       return res.send(createdUserWithOutPassword);

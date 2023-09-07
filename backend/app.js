@@ -13,7 +13,7 @@ const { validationSignUp, validationSignIn } = require('./middlewares/validation
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const NotFoundError = require('./errors/not-found-err');
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3000, ORIGIN = 'http://localhost:3001' } = process.env;
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
   useNewUrlParser: true,
@@ -22,7 +22,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 const app = express();
 app.use(cors({
   credentials: true,
-  origin: 'http://localhost:3001',
+  origin: ORIGIN,
 }));
 
 app.use(bodyParser.json());

@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000'
+import { BASE_URL } from '../index'
 
 const getResponseData = (res) => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`)
 
