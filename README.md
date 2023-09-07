@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.36.92
 
-Frontend https://...
+Frontend https://practicum.studentlea.nomoredomainsicu.ru
 
-Backend https://...
+Backend https://domainlea.students.nomoredomainsicu.ru
