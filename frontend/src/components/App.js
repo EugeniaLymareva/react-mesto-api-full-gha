@@ -13,7 +13,7 @@ import AddPlacePopup from './AddPlacePopup.js'
 import Register from './Register.js'
 import Login from './Login.js'
 import ProtectedRoute from './ProtectedRoute.js'
-import * as auth from '../utils/auth.js'
+// import * as auth from '../utils/auth.js'
 import { parseCookie } from '../utils/parseCookie.js'
 
 function App() {
