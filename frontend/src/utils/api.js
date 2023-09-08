@@ -87,7 +87,7 @@ class Api {
   }
   
   const api = new Api({
-    baseUrl: BASE_URL,
+    baseUrl: BASE_URL,   /// добавить в заголовое токен 
     headers: {
       'Content-Type': 'application/json'
     }
