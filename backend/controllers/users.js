@@ -123,9 +123,9 @@ module.exports.login = (req, res, next) => {
       );
       /// вернём токен
       const response = res.clearCookie('token').cookie('token', token, {
-        maxAge: 3600000,
-        // httpOnly: true,
+        maxAge: 604800000,
         sameSite: 'none',
+        domain: 'nomoredomainsicu.ru',
         secure: true,
       });
       response.send({ token });

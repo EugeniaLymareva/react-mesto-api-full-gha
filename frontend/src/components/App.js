@@ -13,7 +13,6 @@ import AddPlacePopup from './AddPlacePopup.js'
 import Register from './Register.js'
 import Login from './Login.js'
 import ProtectedRoute from './ProtectedRoute.js'
-// import * as auth from '../utils/auth.js'
 import { parseCookie } from '../utils/parseCookie.js'
 
 function App() {
@@ -34,27 +33,27 @@ function App() {
   React.useEffect(() => {
     if (isLoggedIn) {
       api.getUserInfo()
-    .then(response => {
-      setCurrentUser(response)
-    })
-    .catch((err) => {console.log(err)})
+        .then(response => {
+          setCurrentUser(response)
+        })
+        .catch((err) => {console.log(err)})
 
-    api.getInitialCards()
-    .then(response => {
-        setCards(
-            response.map((data) => ({
-                _id: data._id,
-                likes: data.likes,
-                link: data.link,
-                name: data.name,
-                owner: data.owner,
-            }))
-        )
-    })
-    .catch((err) => {console.log(err)})
+        api.getInitialCards()
+        .then(response => {
+            setCards(
+                response.map((data) => ({
+                    _id: data._id,
+                    likes: data.likes,
+                    link: data.link,
+                    name: data.name,
+                    owner: data.owner,
+                }))
+            )
+        })
+        .catch((err) => {console.log(err)})
+    } else {
+      navigate('/')
     }
-    return
-    
 }, [isLoggedIn])
 
 function handleLogin(userData) {

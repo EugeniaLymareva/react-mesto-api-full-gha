@@ -20,25 +20,9 @@ export const login = (email, password) => {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          // 'Sec-Fetch-Site': 'cross-site',
         },
         body: JSON.stringify({ email, password }),
         credentials: "include",
-        // mode: "navigate"
     })
     .then(getResponseData)
 }
-
-// export const checkToken = (token) => {
-//   console.log('checkToken')
-//     return fetch(`${BASE_URL}/users/me`, {
-//         method: 'GET',
-//         headers: {
-//           'Accept': 'application/json',
-//           // 'Content-Type': 'application/json',
-//           // 'Authorization': `Bearer ${token}`,
-//         },
-//         credentials: 'include',
-//   })
-//   .then(getResponseData)
-// }

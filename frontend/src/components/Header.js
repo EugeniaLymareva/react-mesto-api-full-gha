@@ -8,7 +8,8 @@ function Header(props) {
   const navigate = useNavigate()
 
   function signOut(){
-    document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    localStorage.removeItem('token');
+    document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=nomoredomainsicu.ru; secure; sameSite=None;";
     navigate('/sign-in');
   }
 
