@@ -1,5 +1,3 @@
-import { BASE_URL } from '../index'
-
 class Api {
     constructor(options) {
       this._baseUrl = options.baseUrl
@@ -87,9 +85,9 @@ class Api {
   }
   
   const api = new Api({
-    baseUrl: BASE_URL,   /// добавить в заголовое токен 
+    baseUrl: 'https://domainlea.students.nomoredomainsicu.ru',   /// добавить в заголовое токен 
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     }
   })
   

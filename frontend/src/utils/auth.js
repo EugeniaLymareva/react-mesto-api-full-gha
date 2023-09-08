@@ -1,4 +1,4 @@
-import { BASE_URL } from '../index'
+const BASE_URL = 'https://domainlea.students.nomoredomainsicu.ru';
 
 const getResponseData = (res) => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`)
 
