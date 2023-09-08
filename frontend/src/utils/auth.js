@@ -25,9 +25,7 @@ export const login = (email, password) => {
         body: JSON.stringify({ email, password }),
         credentials: "include",
         // mode: "navigate"
-        
-
-  })
+    })
     .then(getResponseData)
 }
 

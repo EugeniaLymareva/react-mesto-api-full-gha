@@ -4,7 +4,9 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-require('dotenv').config();
+// import dotenv from 'dotenv'
+// dotenv.config();
+// require('dotenv').config();
 
 export const { BASE_URL = 'http://localhost:3000' } = process.env;
 

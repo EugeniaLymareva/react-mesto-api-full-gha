@@ -5,7 +5,9 @@ const { JWT_SECRET, NODE_ENV } = process.env;
 
 module.exports = (req, res, next) => {
   // достаём авторизационный заголовок
-  const { token } = req.cookies;
+  const { token: cookieToken } = req.cookie;
+  const { authorization: headersToken } = req.headers;
+  const token = (cookieToken || headersToken || '').replace('Bearer ', '');
   /// убеждаемся, что он есть или начинается с Bearer
   if (!token) {
     throw new UnauthorizedError('Необходима авторизация');

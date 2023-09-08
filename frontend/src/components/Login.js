@@ -23,7 +23,7 @@ function Login(props) {
         }
         auth.login(formValue.email, formValue.password) 
         .then((data) => {
-            localStorage.setItem('jwt', data.token)
+            localStorage.setItem('token', data.token)
             props.onLoggedIn({ email: formValue.email })
         })
         .catch((err) => {
