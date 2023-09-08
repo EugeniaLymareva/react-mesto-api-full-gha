@@ -1,3 +1,4 @@
+const { HTTP_STATUS_CREATED } = require('http2').constants;
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
@@ -47,7 +48,7 @@ module.exports.createUser = (req, res, next) => {
         password: _,
         ...createdUserWithOutPassword
       } = userObj;
-      return res.send(createdUserWithOutPassword);
+      return res.status(HTTP_STATUS_CREATED).send(createdUserWithOutPassword);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {

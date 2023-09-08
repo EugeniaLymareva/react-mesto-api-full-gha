@@ -1,3 +1,4 @@
+const { HTTP_STATUS_CREATED } = require('http2').constants;
 const Card = require('../models/card');
 
 const NotFoundError = require('../errors/not-found-err');
@@ -14,7 +15,7 @@ module.exports.createCard = (req, res, next) => {
   const { name, link } = req.body;
   const owner = req.user._id;
   Card.create({ name, link, owner })
-    .then((card) => res.send(card))
+    .then((card) => res.status(HTTP_STATUS_CREATED).send(card))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError('Переданы некорректные данные при создании карточки'));
