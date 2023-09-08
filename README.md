@@ -10,7 +10,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.36.92
+IP 158.160.36.92
 
 Frontend https://practicum.studentlea.nomoredomainsicu.ru
 
